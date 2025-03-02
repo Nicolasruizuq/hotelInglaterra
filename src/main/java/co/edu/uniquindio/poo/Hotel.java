@@ -75,7 +75,38 @@ public class Hotel {
     public void eliminarReserva(Reserva reserva) {
         reservas.remove(reserva);
     }
-    //
 
+
+    // Funcionalidad 1
+
+    public void mostrarInformacion() {
+        System.out.println("\n Información del Hotel: " + nombre);
+
+        System.out.println("\n Clientes:");
+        for (Cliente cliente : clientes) {
+            System.out.println(" - " + cliente.getNombre() + " (Cédula: " + cliente.getCedula() +
+                    ", Reservas: " + cliente.getNumeroReservas() + ")");
+        }
+
+        System.out.println("\n Reservas:");
+        for (Reserva reserva : reservas) {
+            System.out.println(" - Entrada: " + reserva.getFechaEntrada() +
+                    ", Salida: " + reserva.getFechaSalida());
+        }
+    }
+
+    // Funcionalidad 2
+    public int contarClientes() {
+        return clientes.size();
+    }
+
+    // Funcionalidad 3
+    public double calcularIngresoTotal() {
+        double total = 0;
+        for (Reserva reserva : reservas) {
+            total += reserva.getHabitacion().getPrecio(); // Suponiendo que Reserva tiene una habitación asociada
+        }
+        return total;
+    }
 
 }

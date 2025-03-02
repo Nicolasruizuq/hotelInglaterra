@@ -4,12 +4,12 @@ public class Habitacion {
 
     public int numero;
     public double precio;
-    public tipoHabitacion tipoHabitacion;
+    public TipoHabitacion TipoHabitacion;
 
-    public Habitacion(int numero, double precio, tipoHabitacion tipoHabitacion) {
+    public Habitacion(int numero, double precio, TipoHabitacion tipoHabitacion) {
         this.numero = numero;
         this.precio = precio;
-        this.tipoHabitacion = tipoHabitacion;
+        this.TipoHabitacion = TipoHabitacion;
     }
 
     public int getNumero() {
@@ -33,7 +33,7 @@ public class Habitacion {
         return "Habitacion{" +
                 "numero=" + numero +
                 ", precio=" + precio +
-                ", tipoHabitacion=" + tipoHabitacion +
+                ", tipoHabitacion=" + TipoHabitacion +
                 '}';
     }
 }
