@@ -6,8 +6,8 @@ public class Main {
         Hotel hotel = new Hotel("Hotel");
 
         Habitacion habitacion1 = new Habitacion(101, 150.0, TipoHabitacion.SIMPLE);
-        Habitacion habitacion2 = new Habitacion(102, 150.0, TipoHabitacion.DOBLE);
-        Habitacion habitacion3 = new Habitacion(103, 150.0, TipoHabitacion.SUIT);
+        Habitacion habitacion2 = new Habitacion(102, 200.0, TipoHabitacion.DOBLE);
+        Habitacion habitacion3 = new Habitacion(103, 350.0, TipoHabitacion.SUIT);
 
         Cliente cliente1 = new Cliente("Juan Pablo", "123456", 1);
         Cliente cliente2 = new Cliente("Nicolas", "1234567", 2);
@@ -31,7 +31,7 @@ public class Main {
         hotel.mostrarInformacion();
 
         // Funcionalidad 2
-        System.out.println("\nTotal de clientes registrados: " + hotel.contarClientes());
+        hotel.mostrarResumen();
 
         // Funcionalidad 3
         System.out.println("\nIngreso total por reservas: $" + hotel.calcularIngresoTotal());

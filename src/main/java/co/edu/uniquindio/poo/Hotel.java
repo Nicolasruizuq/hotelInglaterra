@@ -96,9 +96,11 @@ public class Hotel {
     }
 
     // Funcionalidad 2
-    public int contarClientes() {
-        return clientes.size();
+    public void mostrarResumen() {
+        System.out.println("\nTotal de clientes registrados: " + clientes.size());
+        System.out.println("Total de reservas realizadas: " + reservas.size());
     }
+
 
     // Funcionalidad 3
     public double calcularIngresoTotal() {
